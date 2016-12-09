@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2BFE67C7-683F-4782-92BE-08907EAE93A6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RegexTester</RootNamespace>
+    <AssemblyName>RegexTester</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>RegexTester.Program</StartupObject>
+    <ApplicationIcon>RegExTester.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.2.2864.18696, Culture=neutral, PublicKeyToken=d481317c817cec47, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>RefDLLs\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ctrlRegExTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompileAsm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompileAsm.Designer.cs">
+      <DependentUpon>frmCompileAsm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExportMatchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExportMatchList.Designer.cs">
+      <DependentUpon>frmExportMatchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputSrc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputSrc.Designer.cs">
+      <DependentUpon>frmInputSrc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMatches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMatches.Designer.cs">
+      <DependentUpon>frmMatches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRgxDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRgxDoc.Designer.cs">
+      <DependentUpon>frmRgxDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompileAsm.resx">
+      <DependentUpon>frmCompileAsm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExportMatchList.resx">
+      <DependentUpon>frmExportMatchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputSrc.resx">
+      <DependentUpon>frmInputSrc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatches.resx">
+      <DependentUpon>frmMatches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRgxDoc.resx">
+      <DependentUpon>frmRgxDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_page.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action_refresh.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_new.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action_save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layout_content.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layout_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_smallcaps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_padding_bottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_padding_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_padding_top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_columns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_indent_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\script_code_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_white_text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_white_text1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="initlayout.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RefDLLs\WeifenLuo.WinFormsUI.Docking.dll" />
+    <Content Include="RegExTester.ico" />
+    <None Include="Resources\RegExTester_AboutBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RainstormStudios\Project Files\RainstormStudios.Controls\RainstormStudios.Controls.csproj">
+      <Project>{b2349047-501b-40ff-a45f-b5e1faec1cf8}</Project>
+      <Name>RainstormStudios.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RainstormStudios\Project Files\RainstormStudios.Drawing\RainstormStudios.Drawing.csproj">
+      <Project>{7fcda335-1f3c-438f-aee7-bc86f58e6670}</Project>
+      <Name>RainstormStudios.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RainstormStudios\Project Files\RainstormStudios\RainstormStudios.csproj">
+      <Project>{2b3495a5-12d8-46af-9a15-4591bc67218e}</Project>
+      <Name>RainstormStudios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
