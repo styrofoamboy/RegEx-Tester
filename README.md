@@ -6,3 +6,5 @@ NOTE:  This project will require the following libraries from the RainstormStudi
 * RainstormStudios
 * RainstormStudios.Controls
 * RainstormStudios.Drawing
+
+https://github.com/styrofoamboy/RainstormStudios
